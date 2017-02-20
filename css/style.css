@@ -43,7 +43,6 @@
   /* itunes streaming btn */
   #itunes{
     height: 38px;
-    text-transform: uppercase;
     margin-left: 40%;
     margin-bottom: 20px;
   }
@@ -93,6 +92,7 @@
     float: left;
     margin-bottom: 70px;
   }
+  .studio p:first-child{margin-bottom: 20px;}
   .studio:first-of-type{
     padding-right: 15px;
   }
@@ -286,7 +286,7 @@
     margin: 100px auto 150px;
     padding-left: 0.9375em; padding-right: 0.9375em;
     text-align: left;
-    font-family: 'Comfortaa'
+    /*font-family: 'Comfortaa'*/
   }
   .show_title{
     height: 44px;
