@@ -251,11 +251,23 @@
   /* twitter_txt */
   .twitter_txt{
     width: 495px;
-    height: 36px;
+    /*height: 36px;*/
     overflow: hidden;
     display: block;
     margin-bottom: 10px;
+    position: relative;
   }
+
+  .twitter_txt ul{
+    width: 495px;
+    height: 36px;
+    font-size: 0;
+  }
+  .twitter_txt ul li{
+    display: inline-block;
+    font-size: 12px;
+  }
+
 
 
   /* instagram */

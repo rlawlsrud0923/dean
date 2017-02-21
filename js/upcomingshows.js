@@ -20,3 +20,17 @@
             }
         });
     });
+
+
+
+// $(document).ready(function(){
+//
+//     $(".show_title").click(function(){
+//
+//       $(this).css('color','#fcbe46');
+//
+//       $(this).next(".show_desc").slideToggle("slow");
+//
+//     });
+//
+// });
