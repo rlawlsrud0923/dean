@@ -251,7 +251,7 @@
   /* twitter_txt */
   .twitter_txt{
     width: 495px;
-    /*height: 36px;*/
+    height: 36px;
     overflow: hidden;
     display: block;
     margin-bottom: 10px;
