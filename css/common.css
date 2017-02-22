@@ -113,7 +113,7 @@
     transition: all 500ms ease-out;
   }
 
-  #itunes li:hover,#purchase_album li:hover{
+  #itunes li:hover,#purchase_album li:hover,input[type=submit]:hover,#icon_group a:hover{
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
