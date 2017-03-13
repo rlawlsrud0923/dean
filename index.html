@@ -8,23 +8,89 @@
   <meta name="apple-touch-fullscreen" content="yes">
   <meta http-equiv="cleartype" content="on">
   <meta name="HandheldFriendly" content="True">
-<link rel="shortcut icon" href="img/logo_title.png">
+  <link rel="shortcut icon" href="img/logo_title.png">
   <title> http://officialdean.com/ </title>
   <link rel="stylesheet" href="css/common.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/font.css"/>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<link rel="stylesheet" href="css/responsive-lazyload.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/fix.js" charset="utf-8"></script>
   <script src="js/upcomingshows.js" charset="utf-8"></script>
   <script src="js/fadebanner.js" charset="utf-8"></script>
+  <script src="js/player.js" charset="utf-8"></script>
+
+<style>
+  /*
+   * Add a loading animation to lazyloaded images.
+   */
+  .js--lazyload--loading::before,.js--lazyload--loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #BBBBBB;
+    border: 2px solid #BBBBBB;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 1;
+  }
+  .js--lazyload::before {
+    animation: loading 2s linear 0s infinite;
+  }
+  .js--lazyload::after {
+    animation: loading 2s linear -1s infinite;
+  }
+  @keyframes loading {
+    0% {
+      background-color: rgba(175, 175, 175, 0.95);
+      transform: translate(-50%, -50%) scale(0.1);
+      opacity: 1;
+    }
+    60% {
+      background-color: rgba(175, 175, 175, 0.5);
+    }
+    100% {
+      background-color: rgba(175, 175, 175, 0);
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0;
+    }
+  }
+  /*
+   * NOTE: It’d probably be wise to hide the animation if JS is disabled.
+   * To do this, add a `no-js` class to the body element and remove it with
+   * JS once the DOM is ready, then uncomment this rule.
+   * /
+  .no-js .js--lazyload--loading {
+    display: none;
+  }
+  /**/
+</style>
 </head>
+
 <body>
+
+<!-- http://ryuseunghyun.tistory.com/889
+height 100%맞추기 -->
 
   <div id="container">
 
-    <header></header>
+    <div class="js--lazyload" style="padding-bottom: 66.67%">
+        <!-- <img alt="image description"
+             src="img/album_1901x950.jpg"
+             srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-lazyload="img/album_1901x950.jpg 300w,
+                            img/album_1901x950.jpg 600w,
+                            img/album_1901x950.jpg 690w,
+                            img/album_1901x950.jpg 1380w"> -->
+          <header></header>
+    </div>
+
 
     <!-- gnb_wrap -->
     <section class="gnb_wrap" class="yel">
@@ -39,6 +105,7 @@
           <li><a href="#upcomingshows" class="yel">upcoming shows</a></li>
           <li><a href="contact.html" class="yel">contact</a></li>
         </ul>
+
       </div>
 
     </section><!-- /gnb_wrap -->
@@ -57,19 +124,19 @@
 
         <!-- itunes streaming btn -->
         <ul id="itunes">
-          <li class="btn"><a href="https://itunes.apple.com/us/album/130-mood-trbl/id1094604739">itunes us</a></li>
-          <li class="btn"><a href="https://itunes.apple.com/gb/album/130-mood-trbl/id1091980376">itunes uk</a></li>
+          <li><a href="https://itunes.apple.com/us/album/130-mood-trbl/id1094604739"><div class="btn">itunes us</div></a></li>
+          <li><a href="https://itunes.apple.com/gb/album/130-mood-trbl/id1091980376"><div class="btn">itunes uk</div></a></li>
         </ul>
 
         <p><span style="font-size: 150%;"><strong>&darr;album purchase&darr;</strong></span></p>
 
         <!-- purchase_album btn -->
         <ul id="purchase_album">
-          <li class="btn"><a href="http://www.hottracks.kr/Product/Detail/view/pid/24872/cid/">hottracks</a></li>
-          <li class="btn"><a href="http://po.st/hDEoj2">yes24</a></li>
-          <li class="btn"><a href="http://music.aladin.co.kr/shop/wproduct.aspx?ItemId=79834671&amp;start=slayer">aladin</a></li>
-          <li class="btn"><a href="http://po.st/KMybms">interpark</a></li>
-          <li class="btn"><a href="http://po.st/JjBzQZ">synnara</a></li>
+          <li><a href="http://www.hottracks.kr/Product/Detail/view/pid/24872/cid/"><div class="btn">hottracks</div></a></li>
+          <li><a href="http://po.st/hDEoj2"><div class="btn">yes24</div></a></li>
+          <li><a href="http://music.aladin.co.kr/shop/wproduct.aspx?ItemId=79834671&amp;start=slayer"><div class="btn">aladin</div></a></li>
+          <li><a href="http://po.st/KMybms"><div class="btn">interpark</div></a></li>
+          <li><a href="http://po.st/JjBzQZ"><div class="btn">synnara</div></a></li>
         </ul>
       </section>
 
@@ -78,7 +145,7 @@
       <!-- soundcloud -->
       <section id="soundcloud">
 		<center>
-          <iframe width="50%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/216522597&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+          <iframe width="50%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/216522597&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         </center>
       </section><!-- /soundcloud -->
 
@@ -1100,19 +1167,69 @@
 
 <!-- ======================================================================= -->
 
-    <!--
-     HTML Audio/Video Events
-     https://www.w3schools.com/tags/ref_av_dom.asp
-     모양 만들고 스크립트로 재생 정지 만들기
-    -->
-    <div id="player">
-      <div class="player">
-        <audio controls>
-        <source src="horse.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-        </audio>
-      </div>
-    </div>
+  <!--
+   HTML Audio/Video Events
+   https://www.w3schools.com/tags/ref_av_dom.asp
+   모양 만들고 스크립트로 재생 정지 만들기
+  -->
+  <!-- player -->
 
+
+  <div id="player_wrap">
+
+    <div id="player">
+
+
+
+      <div class="left">
+      <div id="plus">+</div>
+        <div id="fap-cover-wrapper">
+          <div id="fap-cover-replacement">
+            <span>...</span>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="right">
+
+        <div id="player-control">
+          <a class="fa fa-backward"></a>
+          <a class="fa fa-play" id="play"></a>
+          <a class="fa fa-forward"></a>
+
+          <div id="volume">
+            <input type="range" class="fap-volume-bar" min="0" max="10" value="4">
+            <!-- <div class="fap-volume-bar"></div> -->
+            <div class="fap-volume-sign fa fa-volume-up" id="mute"></div>
+          </div>
+
+          <div id="fap-time-bar">
+            <div class="fap-loading-bar"></div>
+            <span id="fap-current-time">00:00:00</span>
+            <span id="fap-total-time">00:00:00</span>
+          </div>
+        </div>
+
+        <div id="control">
+          <a class="fa fa-caret-square-o-up"></a>
+          <a class="fa fa-random"></a>
+          <a class="fa fa-list"></a>
+        </div>
+        <!-- <audio controls>
+        <source src="horse.mp3" type="audio/mpeg"></audio> -->
+      </div>
+
+    </div>
+  </div>
+  <!-- /player_wrap -->
+
+
+    <script src="js/responsive-lazyload.min.js"></script>
+    <script>
+      responsiveLazyload.lazyLoadImages();
+    </script>
 </body>
 </html>
