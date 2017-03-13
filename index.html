@@ -13,15 +13,24 @@
   <link rel="stylesheet" href="css/common.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/font.css"/>
-<link rel="stylesheet" href="css/responsive-lazyload.min.css">
+<link rel="stylesheet" href="css/responsive-lazyload.min.css"><!--lazyload -->
+<link href="css/animate.css" rel="stylesheet"><!-- random animation -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/fix.js" charset="utf-8"></script>
   <script src="js/upcomingshows.js" charset="utf-8"></script>
   <script src="js/fadebanner.js" charset="utf-8"></script>
   <script src="js/player.js" charset="utf-8"></script>
+  <script src="js/jquery.lazyloadxt.js"></script>
+
 
 <style>
+/*img, video, iframe[data-src] {
+    box-shadow: inset 0 0 0 1px #ccc;
+}*/
+.container > p, .ui-content > p, #ajax > p {
+    text-align: center;
+}
   /*
    * Add a loading animation to lazyloaded images.
    */
@@ -61,35 +70,51 @@
       opacity: 0;
     }
   }
-  /*
-   * NOTE: It’d probably be wise to hide the animation if JS is disabled.
-   * To do this, add a `no-js` class to the body element and remove it with
-   * JS once the DOM is ready, then uncomment this rule.
-   * /
+
   .no-js .js--lazyload--loading {
     display: none;
   }
-  /**/
+
+
+  /* to prevent flickering */
+.lazy-hidden {
+    opacity: 0;
+}
 </style>
+<script>
+
+  var index = Math.floor((Math.random() * 17)); //17개 중에서 할때마다 랜덤하게 값 나오도록
+  var category = 'animals',
+      effects = ['tada', 'pulse', 'flipInX', 'flipInY', 'fadeIn', 'fadeInUp', 'fadeInRight', 'fadeInUpBig',
+          'fadeInRightBig', 'slideInRight', 'bounceIn', 'bounceInUp', 'bounceInRight', 'rotateIn',
+          'rotateInUpLeft', 'rotateInUpRight', 'lightSpeedIn'];
+
+  $.lazyLoadXT.onload = function() {
+      var $el = $("#main"); //이미지 태그 아이디로 이미지 태그 가져와서
+      $el
+          .removeClass('lazy-hidden')
+          .addClass('animated ' + effects[index]);
+  };
+
+  $(window).load(function() {
+ $('.js--lazyload').hide();
+});
+</script>
 </head>
 
 <body>
 
-<!-- http://ryuseunghyun.tistory.com/889
-height 100%맞추기 -->
-
   <div id="container">
 
-    <div class="js--lazyload" style="padding-bottom: 66.67%">
-        <!-- <img alt="image description"
-             src="img/album_1901x950.jpg"
-             srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-             data-lazyload="img/album_1901x950.jpg 300w,
-                            img/album_1901x950.jpg 600w,
-                            img/album_1901x950.jpg 690w,
-                            img/album_1901x950.jpg 1380w"> -->
-          <header></header>
+    <div class="js--lazyload"></div>
+    <div class="animation_box">
+      <div class="page-header">
+        <img alt="image description"
+              id="main"
+              data-src="img/album_1901x950.jpg">
+      </div>
     </div>
+
 
 
     <!-- gnb_wrap -->
