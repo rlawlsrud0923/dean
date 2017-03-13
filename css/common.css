@@ -4,8 +4,9 @@
  }
 
  body{color: #FFF;}
+ html,body{height: 100%;}
 
- #container{background-color: #000;}
+ #container{background-color: #000; min-height: 100%;}
 
  .animation_box{height: 100%}
 
