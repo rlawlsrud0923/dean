@@ -24,7 +24,6 @@ $(document).ready(function(){
 	//     $('.twitter_txt ul li').eq(fadeIdx).addClass('on').fadeIn().parent().siblings().removeClass('on')
 	//   }
 	// }
-	//
 
 
 
