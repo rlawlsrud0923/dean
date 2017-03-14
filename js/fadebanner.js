@@ -26,34 +26,7 @@ $(document).ready(function(){
 	// }
 	//
 
-	var idx = 0; //초기값
 
- 	// auto slide
- // 	var inters = setInterval(function(){
- // 		 $('.twitter_txt').trigger('click')
- // 	},3000);
-
-
-
-
-	 function movement(start,end,i){
-			$('.view li').eq(i).addClass('on').find('div').css({
-					left:start,
-					'display':'block'
-			}).stop().animate({
-					left:end
-			}).parent().siblings().removeClass();
-				// 선택된 요소(부모,형제요소)의 클래스 이름을 제거해.
-
-
-			if(idx == $('.view li').length){
-					idx = 0
-					movement('100%',0,idx)
-			}else if(idx < 0){
-					idx = $('.view li').length -1;
-					movement('-100%',0,idx)
-			}
-	 }
 
 
 
