@@ -215,16 +215,11 @@ html,body{height: 100%;}
 /******************************************************************************/
 
   /* sns */
-  #sns{
-    padding-bottom: 100px;
-  }
-  #sns i{
-    font-size: 30px;
-  }
+  #sns{padding-bottom: 100px;}
+  #sns i{font-size: 30px;}
+
   /* sns_header */
-  .sns_header{
-    margin-bottom: 250px;
-  }
+  .sns_header{margin-bottom: 250px;}
   .icon_box{
     width: 96px; height: 60px;
     text-align: center;
@@ -251,9 +246,7 @@ html,body{height: 100%;}
     padding: 0 15px;
     text-align: center;
   }
-  #twitter_box a{
-    color: #fcbe46;
-  }
+  #twitter_box a{color: #fcbe46;}
 
   /* aside */
   #twitter_box aside{
@@ -262,39 +255,29 @@ html,body{height: 100%;}
     font-size: 13px;
     line-height: 18px;
     color: #FFF;
+    overflow: hidden;
   }
-  #twitter_box aside a{
-    /*margin-top: 10px;*/
-    /*display: block;*/
-    font-weight: 600;
-    font-size: 12px;
-  }
+  #twitter_box aside a{font-weight: 600; font-size: 12px;}
 
   /* twitter_txt */
-  .twitter_txt{
-    width: 495px;
-    height: 36px;
-    /*overflow: hidden;*/
-    display: block;
+  #twitter_txt {
+    width: 300%;
+    /*width: 495px;*/
+    overflow: hidden;
+    -webkit-transition: margin-left 500ms ease-in-out;
+    -moz-transition: margin-left 500ms ease-in-out;
+    -o-transition: margin-left 500ms ease-in-out;
+    -ms-transition: margin-left 500ms ease-in-out;
+    transition: margin-left 500ms ease-in-out;
+    overflow: hidden;
     margin-bottom: 10px;
-    position: relative;
-  }
-
-  .twitter_txt ul{
-    width: 495px;
     height: 36px;
-    font-size: 0;
   }
-  .twitter_txt ul li{
-    /*display: inline-block;*/
-    font-size: 12px;
-    position: absolute;
-    display: none;
+  .section {
+    width: 33.3333%;
+    float: left;
+    height: 200px;
   }
-  .twitter_txt ul li:first-child{
-    display: block;
-  }
-
 
 
   /* instagram */
