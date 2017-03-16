@@ -1,10 +1,8 @@
 $( document ).ready( function() {
 
+  //player toggle
   var toggle=true;
-
   $( "#plus" ).click(function(){
-    // console.log(toggle);
-
     if( toggle == true) //보이게
     {
       $( "#player_wrap" ).animate( {bottom: '-100px'},"fast");
@@ -14,36 +12,27 @@ $( document ).ready( function() {
       $( "#player_wrap" ).animate( {bottom: '-171px'},"fast");
       toggle = true;
     }
-
   });
 
+  var playing = $("#play").play();
+  $(playing)
 
-
-  // container = $('#player_wrap');
-	// cover = $('#fap-cover-replacement');
-	// play = $('#play');
-	// pause = $('#pause');
-	// mute = $('#mute');
-	// // muted = $('#muted');
-	// // close = $('#close');
-	// song = new Audio('music/music.mp4a');
-	// duration = song.duration;
-  //
-  // play.on('click',function(e){
-  //   e.preventDefault();
-	// 	song.play();
-  //
-  //   $(this).replaceWith('<a class="button gradient" id="pause" href="" title=""></a>');
-	// 	container.addClass('containerLarge');
-	// 	cover.addClass('coverLarge');
-	// 	$('#close').fadeIn(300);
-	// 	$('#seek').attr('max',song.duration);
-  // });
-
-
-
-
-
-
+  $("#pause,#load").css("display","none");
 
 });
+
+function play(){
+  var play = document.getElementById('players');
+  play.play();
+  if(play==visi).style.display="none";
+}
+
+function load(){
+  var pause = document.getElementById('players');
+  load.load();
+}
+
+function pause(){
+  var pause = document.getElementById('players');
+  pause.pause();
+}
