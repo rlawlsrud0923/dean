@@ -9,7 +9,7 @@
   <meta http-equiv="cleartype" content="on">
   <meta name="HandheldFriendly" content="True">
   <link rel="shortcut icon" href="img/logo_title.png">
-  <title> http://officialdean.com/ </title>
+  <title>☄ http://officialdean.com/ </title>
   <link rel="stylesheet" href="css/common.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/font.css"/>
@@ -145,8 +145,10 @@
             <p>Available on iTunes</p>
 
             <ul>
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/im-not-sorry-ft-eric-bellinger-snip" title="I'm Not Sorry ft. Eric Bellinger" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000121967590-rcm122-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58a825b3d36b5" data-autoenqueue="no">play</a></li>
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/im-not-sorry-ft-eric-bellinger-snip" title="I'm Not Sorry ft. Eric Bellinger" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000121967590-rcm122-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58a825b3d36b5" data-enqueue="yes">enqueue</a></li>
+              <li>
+                <a class="play_btn btn_hover" href="https://soundcloud.com/iviendoien/dean-im-not-sorry-feat-eric-bellinger" title="I'm Not Sorry ft. Eric Bellinger" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000121967590-rcm122-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58a825b3d36b5" data-autoenqueue="no">play</a>
+              </li>
+              <li><a class="play_btn btn_hover" href="https://soundcloud.com/iviendoien/dean-im-not-sorry-feat-eric-bellinger" title="I'm Not Sorry ft. Eric Bellinger" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000121967590-rcm122-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58a825b3d36b5" data-enqueue="yes">enqueue</a></li>
             </ul>
           </div>
 
@@ -1112,7 +1114,7 @@
     <!-- footer -->
     <section id="footer">
       <div class="footer_logo_box">
-        <a href="main.html"><img src="img/logo_300x188.png" alt="official dean"></a>
+        <a href="index.html"><img src="img/logo_300x188.png" alt="official dean"></a>
       </div>
     </section><!-- /footer -->
 
@@ -1125,19 +1127,16 @@
   <!--
    HTML Audio/Video Events
    https://www.w3schools.com/tags/ref_av_dom.asp
-   모양 만들고 스크립트로 재생 정지 만들기
   -->
   <!-- player -->
-
-
   <div id="player_wrap">
 
     <div id="player">
 
-
-
       <div class="left">
-      <div id="plus">+</div>
+
+        <div id="plus">+</div>
+
         <div id="fap-cover-wrapper">
           <div id="fap-cover-replacement">
             <span>...</span>
@@ -1152,12 +1151,33 @@
 
         <div id="player-control">
           <a class="fa fa-backward"></a>
-          <a class="fa fa-play" id="play"></a>
-          <a class="fa fa-forward"></a>
 
+          <!--<audio controls >
+            <source src="audio/audio_1.mp3" type="audio/mp3">
+          </audio> -->
+
+          <audio id="players">
+            <source src="audio/audio_1.mp3" type="audio/mp3">
+          </audio>
+
+          <a class="fa fa-play" id="play" onclick="play()"></a>
+          <a class="fa fa-stop" id="load" onclick="load()"></a>
+          <a class="fa fa-pause" id="pause" onclick="pause()"></a>
+          <a class="fa fa-forward"></a>
+<!--
+  $('')
+  document.getElementById('')
+  document.getElementByClass('')
+  document.getElementByTagName('')
+  https://www.w3schools.com/jsref/dom_obj_audio.asp
+
+  https://www.w3schools.com/tags/av_met_load.asp
+
+  http://crossxp.tistory.com/668
+ -->
           <div id="volume">
             <input type="range" class="fap-volume-bar" min="0" max="10" value="4">
-            <!-- <div class="fap-volume-bar"></div> -->
+            <div class="fap-volume-bar"></div>
             <div class="fap-volume-sign fa fa-volume-up" id="mute"></div>
           </div>
 
@@ -1173,8 +1193,30 @@
           <a class="fa fa-random"></a>
           <a class="fa fa-list"></a>
         </div>
-        <!-- <audio controls>
-        <source src="horse.mp3" type="audio/mpeg"></audio> -->
+        <script>
+          $("#pause,#load").css("diplay","none");
+          function play(){
+            var play = document.getElementById('players');
+            play.play();
+          }
+
+          function load(){
+            var pause = document.getElementById('players');
+            pause.load();
+          }
+
+
+
+          function pause(){
+              var pause = document.getElementById('players');
+              pause.pause();
+          }
+
+
+
+
+
+        </script>
       </div>
 
     </div>
@@ -1185,6 +1227,8 @@
     <script src="js/responsive-lazyload.min.js"></script>
     <script>
       responsiveLazyload.lazyLoadImages();
+
+
     </script>
 </body>
 </html>
