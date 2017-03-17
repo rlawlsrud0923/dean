@@ -207,6 +207,21 @@
             </ul>
           </div>
 
+          <div class="news_box">
+            <dl>
+              <dt><img src="img/album_6.jpg" alt="What2do"></dt>
+              <dd class="yel">What2do</dd>
+            </dl>
+            <p>Available on iTunes</p>
+
+            <ul class="download">
+              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/dean-ft-anderson-paak-put-my-hands-on-you" title="Put My Hands On You ft. Anderson .Paak (prod. by esta. &amp; Mr. Carmack)" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000129320337-67zprz-t500x500-400x400.jpg" target="https://itunes.apple.com/us/album/put-my-hands-on-you-feat./id1039174552" data-meta="#fap-meta-58aa4e09611e1"data-autoenqueue="no">play</a></li>
+              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/dean-ft-anderson-paak-put-my-hands-on-you" title="Put My Hands On You ft. Anderson .Paak (prod. by esta. &amp; Mr. Carmack)" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000129320337-67zprz-t500x500-400x400.jpg" target="https://itunes.apple.com/us/album/put-my-hands-on-you-feat./id1039174552" data-meta="#fap-meta-58aa4e09611e1" data-enqueue="yes">enqueue</a></li>
+              <li><a class="download_btn download_hover" href="https://itunes.apple.com/us/album/put-my-hands-on-you-feat./id1039174552" target="_blank">download</a></li>
+            </ul>
+          </div>
+
+
         </div>
       </section><!-- /news -->
 
@@ -1063,7 +1078,7 @@
         <div class="news_">
           <div class="news_box">
             <dl>
-              <dt><img src="img/album_5.jpg" alt="Here &amp; Now ft. Mila J (esta. Remix)"></dt>
+              <dt><img src="img/album_7.jpg" alt="Here &amp; Now ft. Mila J (esta. Remix)"></dt>
               <dd class="yel">Here &amp; Now ft. Mila J (esta. Remix)</dd>
             </dl>
               <!-- <p>Available on iTunes</p> -->
@@ -1075,10 +1090,9 @@
 
           <div class="news_box">
             <dl>
-              <dt><img src="img/album_6.jpg" alt="I'm Not Sorry remix set"></dt>
-              <dd class="yel">I'm Not Sorry remix set</dd>
+              <dt><img src="img/album_8.jpg" alt="D (half Moon) accoustic"></dt>
+              <dd class="yel">D (half Moon) accoustic</dd>
             </dl>
-            <p>4 TRACKS  14:35</p>
             <ul class="download">
               <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/sets/im-not-sorry-remix" title="I'm Not Sorry remix set" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000127606600-73dc78-t500x5001-400x400.jpg" target="https://api.soundcloud.com/tracks/217564529/download?secret_token=s-aimKF&client_id=cUa40O3Jg3Emvp6Tv4U6ymYYO50NUGpJ" data-meta="#fap-meta-58aa4e0a0a1e4" data-autoenqueue="yes">play</a></li>
               <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/sets/im-not-sorry-remix" title="I'm Not Sorry remix set" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000127606600-73dc78-t500x5001-400x400.jpg" target="https://api.soundcloud.com/tracks/217564529/download?secret_token=s-aimKF&client_id=cUa40O3Jg3Emvp6Tv4U6ymYYO50NUGpJ" data-meta="#fap-meta-58aa4e0a0a1e4" data-enqueue="yes">enqueue</a></li>
@@ -1150,20 +1164,16 @@
       <div class="right">
 
         <div id="player-control">
-          <a class="fa fa-backward"></a>
-
-          <!--<audio controls >
-            <source src="audio/audio_1.mp3" type="audio/mp3">
-          </audio> -->
 
           <audio id="players">
             <source src="audio/audio_1.mp3" type="audio/mp3">
+            <source src="audio/audio_2.mp3" type="audio/mp3">
           </audio>
 
+          <a class="fa fa-backward" id="prev"></a>
           <a class="fa fa-play" id="play" onclick="play()"></a>
-          <a class="fa fa-stop" id="load" onclick="load()"></a>
           <a class="fa fa-pause" id="pause" onclick="pause()"></a>
-          <a class="fa fa-forward"></a>
+          <a class="fa fa-forward" id="next"></a>
 <!--
   $('')
   document.getElementById('')
@@ -1175,10 +1185,10 @@
 
   http://crossxp.tistory.com/668
  -->
-          <div id="volume">
+          <div id="volume_box">
             <input type="range" class="fap-volume-bar" min="0" max="10" value="4">
             <div class="fap-volume-bar"></div>
-            <div class="fap-volume-sign fa fa-volume-up" id="mute"></div>
+            <div class="fap-volume-sign fa fa-volume-up" id="muted"></div>
           </div>
 
           <div id="fap-time-bar">
@@ -1195,6 +1205,69 @@
         </div>
 
       </div>
+      <script type="text/javascript">
+      document.getElementById("pause").style.display="none";
+
+      function play(){
+        var play = document.getElementById('players');
+        play.play();
+        document.getElementById("play").style.display="none";
+        document.getElementById("pause").style.display="block";
+      }
+
+      function pause(){
+        var pause = document.getElementById('players');
+        pause.pause();
+        document.getElementById("pause").style.display="none";
+        document.getElementById("play").style.display="block";
+      }
+
+
+      function prev(){
+        var pause = document.getElementById('players');
+        prev.prev();
+      }
+
+      function next(){
+        var next = document.getElementById('players');
+        next.next();
+      }
+
+
+
+//http://www.developphp.com/video/JavaScript/Audio-Playlist-Array-Tutorial
+
+
+      function initAudioPlayer(){
+    	var audio, playbtn, mutebtn, seekslider, volumeslider, seeking=false, seekto, curtimetext, durtimetext, playlist_status, dir, playlist, ext, agent;
+        	dir = "audio/";
+        	playlist = ["audio_1","audio_2","audio_3","audio_4","audio_5","audio_6","audio_7","audio_8"];
+        	playlist_index = 0;
+        	ext = ".mp3";
+      agent = navigator.userAgent.toLowerCase();
+      if(agent.indexOf('firefox') != -1 || agent.indexOf('opera') != -1) {
+          ext = ".ogg";
+      }
+
+      // Set object references
+      playbtn = document.getElementById("play");
+    	mutebtn = document.getElementById("mute");
+    	seekslider = document.getElementById("seekslider");
+    	volumeslider = document.getElementById("volumeslider");
+    	curtimetext = document.getElementById("curtimetext");
+    	durtimetext = document.getElementById("durtimetext");
+    	playlist_status = document.getElementById("playlist_status");
+
+      // Audio Object
+    	audio = new Audio();
+    	audio.src = dir+playlist[0]+ext;
+    	audio.loop = false;
+    	audio.play();
+    	playlist_status.innerHTML = "Track "+(playlist_index+1)+" - "+ playlist[playlist_index]+ext;
+
+
+
+      </script>
 
     </div>
   </div>

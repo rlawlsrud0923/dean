@@ -14,25 +14,4 @@ $( document ).ready( function() {
     }
   });
 
-  var playing = $("#play").play();
-  $(playing)
-
-  $("#pause,#load").css("display","none");
-
 });
-
-function play(){
-  var play = document.getElementById('players');
-  play.play();
-  if(play==visi).style.display="none";
-}
-
-function load(){
-  var pause = document.getElementById('players');
-  load.load();
-}
-
-function pause(){
-  var pause = document.getElementById('players');
-  pause.pause();
-}

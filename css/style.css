@@ -169,6 +169,7 @@
     line-height: 20px;
     /*margin-bottom: 0.65rem;*/
   }
+  .news_box img{width: 100%;}
   .news_box .download{
     width: calc(100% - 166px);
   }
