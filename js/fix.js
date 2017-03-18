@@ -17,4 +17,6 @@ $( document ).ready( function() { //준비되면 실행해
 
   });
 
+  $("#gnb li")
+
 });

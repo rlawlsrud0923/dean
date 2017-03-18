@@ -25,7 +25,6 @@
 <script src="js/jquery.lazyloadxt.js"></script>
 <script src="js/loading.js"></script>
 
-
 </head>
 <body>
 
@@ -96,7 +95,7 @@
       <!-- soundcloud -->
       <section id="soundcloud">
 		    <center>
-          <iframe width="50%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/216522597&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+          <iframe width="50%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/308056377&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         </center>
       </section><!-- /soundcloud -->
 
@@ -281,11 +280,10 @@
                   </div>
 
               </div><!-- /twitter_box -->
+
           		<a href="http://twitter.com/deantheofficial">@deantheofficial</a>
 
             </aside>
-
-
 
         </div><!-- /sns_header -->
 
@@ -1232,39 +1230,6 @@
         var next = document.getElementById('players');
         next.next();
       }
-
-
-
-//http://www.developphp.com/video/JavaScript/Audio-Playlist-Array-Tutorial
-
-
-      function initAudioPlayer(){
-    	var audio, playbtn, mutebtn, seekslider, volumeslider, seeking=false, seekto, curtimetext, durtimetext, playlist_status, dir, playlist, ext, agent;
-        	dir = "audio/";
-        	playlist = ["audio_1","audio_2","audio_3","audio_4","audio_5","audio_6","audio_7","audio_8"];
-        	playlist_index = 0;
-        	ext = ".mp3";
-      agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('firefox') != -1 || agent.indexOf('opera') != -1) {
-          ext = ".ogg";
-      }
-
-      // Set object references
-      playbtn = document.getElementById("play");
-    	mutebtn = document.getElementById("mute");
-    	seekslider = document.getElementById("seekslider");
-    	volumeslider = document.getElementById("volumeslider");
-    	curtimetext = document.getElementById("curtimetext");
-    	durtimetext = document.getElementById("durtimetext");
-    	playlist_status = document.getElementById("playlist_status");
-
-      // Audio Object
-    	audio = new Audio();
-    	audio.src = dir+playlist[0]+ext;
-    	audio.loop = false;
-    	audio.play();
-    	playlist_status.innerHTML = "Track "+(playlist_index+1)+" - "+ playlist[playlist_index]+ext;
-
 
 
       </script>

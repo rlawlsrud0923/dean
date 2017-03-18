@@ -7,18 +7,11 @@
 
  #container{background-color: #000; width: 100%; min-height: 100%; float: left;}
 
- .animation_box{height: 100%;}
- .page-header{
-   position: relative;
-   z-index: -1;
-   background-color: #ddd;
- }
-
  ul{list-style:none;}
 
  a{text-decoration: none;}
 
- a,.btn,.play_btn,.download_btn,#plus,.fa-volume-up,input[type=range],input[type=submit],#fap-cover-replacement{cursor: pointer;}
+ a,#purchase li:hover,#purchase li:hover a,.btn,.play_btn,.download_btn,#plus,.fa-volume-up,input[type=range],input[type=submit],#fap-cover-replacement{cursor: pointer;}
 
  .yel{color: #fcbe46; text-align: center;}
 
