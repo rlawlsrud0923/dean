@@ -1,7 +1,7 @@
-*{
-   margin: 0; padding: 0;
-   outline: 1px #F72F02 solid;
- }
+  *{
+     margin: 0; padding: 0;
+     outline: 1px #FFF solid;
+   }
 
  html,body{height: 100%; color: #FFF;}
 
@@ -75,7 +75,7 @@
     /*width: 65%;*/
     /*width: 1280px;*/
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 95px;
   }
 
 /******************************************************************************/

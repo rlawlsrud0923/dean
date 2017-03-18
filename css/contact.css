@@ -19,7 +19,7 @@
     height: 60px;
   }
   input[type="text"]{
-    width: 610px;
+    width: 615px;
     box-sizing: border-box;
     float: left;
     padding: 17px 20px;
@@ -28,12 +28,8 @@
     font-size: 12px;
     background: #fafafa;
   }
-  input[type="text"]:first-child{
-    margin-right: 15px;
-  }
-  input[type="text"]:last-child{
-    margin-left: 15px;
-  }
+  #your-first{margin-right:15px;}
+  #your-email{margin-left:15px;}
 
   /* textarea */
   textarea{
