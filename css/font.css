@@ -77,13 +77,6 @@
     text-transform: uppercase;
     letter-spacing: 0.2em;
   }
-  .gnb_wrap{
-    font-family: 'Comfortaa';
-    font-size: 13px;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 95px;
-  }
 
 /* Abel ***********************************************************************/
 
@@ -92,4 +85,11 @@
     font-style: normal;
     font-weight: 400;
     src: local('Abel'), local('Abel-Regular'), url(http://themes.googleusercontent.com/static/fonts/abel/v3/N59kklKPso9WzbZH9jwJSg.ttf) format('truetype');
+  }
+  .gnb_wrap{
+    font-family: 'Abel';
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 95px;
   }

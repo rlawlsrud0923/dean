@@ -32,72 +32,60 @@
 
 /******************************************************************************/
 
- /* gnb */
- .gnb_wrap{
-   width: 100%; height: 95px;
-   background-color: #000;
-   z-index: 101;
-   /*position: absolute;*/
-   float: left;
- }
- #gnb{
-   /*width: 65%;*/
-   width: 1280px;
-   margin: 0 auto;
- }
- #gnb img{
-   float: left;
-   margin-top: 20px;
-   margin-left: 15px;
- }
- #gnb ul{
-   float: right;
-   height: 60px;
-   padding-right: 15px;
- }
- #gnb li{
-   float: left;
-   margin-right: 40px;
- }
- #gnb li:nth-child(3){text-transform: uppercase;}
- #gnb li:last-child{ margin-right: 0; text-transform: lowercase;}
+   .gnb_wrap{
+     width: 100%; height: 95px;
+     background-color: #000;
+     z-index: 101;
+     /*position: absolute;*/
+     float: left;
+   }
+   #gnb{
+     max-width: 80.625em;
+     /*width: 65%;*/
+     /*width: 1280px;*/
+     margin: 0 auto;
+   }
+   #gnb img{
+     float: left;
+     margin-top: 20px;
+     margin-left: 15px;
+   }
+   #gnb ul{
+     float: right;
+     padding-right: 15px;
+   }
+   #gnb li{
+     float: left;
+     padding: 0 20px;
+   }
+   #gnb li:nth-child(3){text-transform: uppercase;}
+   #gnb li:last-child{ margin-right: 0; text-transform: lowercase;}
 
- #gnb > li > a:visited {color: #fcbe46;}
+   #gnb > li > a:visited {color: #fcbe46;}
 
- #gnb> li > a:link {color: #fcbe46;}
+   #gnb> li > a:link {color: #fcbe46;}
 
- #gnb a{color: #fcbe46; outline: 0;}
- #gnb a:hover{color: #5a5a5a;}
+   #gnb a{color: #fcbe46; outline: 0;}
+   #gnb a:hover{color: #5a5a5a;}
 
 /******************************************************************************/
 
- /* transition */
- /*a:hover,.show_title,#gnb{
-   -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-   -o-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-   -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-   transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
- }
+  #content{
+    max-width: 80.625em;
+    /*width: 65%;*/
+    /*width: 1280px;*/
+    margin: 0 auto;
+    padding-top: 100px;
+  }
 
- .btn_hover:hover,.download_hover:hover{
-   -webkit-transition: all 500ms ease-out;
-   -moz-transition: all 500ms ease-out;
-   -ms-transition: all 500ms ease-out;
-   -o-transition: all 500ms ease-out;
-   transition: all 500ms ease-out;
- }
+/******************************************************************************/
 
- #itunes li:hover,#purchase_album li:hover,input[type=submit]:hover,#icon_group a:hover{
-   -moz-transition-duration: 0.5s;
-   -o-transition-duration: 0.5s;
-   -webkit-transition-duration: 0.5s;
-   transition-duration: 0.5s;
-
-   -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-   -o-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-   -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-   transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
- }*/
+  #icon_group{
+    padding-top: 100px;
+    padding-bottom: 70px;
+    width: 208px; height: 100%;
+    margin: auto;
+  }
 
 /******************************************************************************/
 

@@ -7,7 +7,6 @@
 
 /******************************************************************************/
 
-  /* contact */
   #contact{
     /*width: 1280px;*/
     margin: 0 auto;
@@ -72,6 +71,7 @@
   #icon_group{
     padding-top: 100px;
     padding-bottom: 120px;
+    text-align: center;
   }
   #icon_group a:hover{
     color: #FFF;
