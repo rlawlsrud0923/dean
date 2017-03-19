@@ -1,4 +1,5 @@
 $( document ).ready( function() {
+
   var index = Math.floor((Math.random() * 17)); //17개 중에서 할때마다 랜덤하게 값 나오도록
   var category = 'animals',
       effects = ['tada', 'pulse', 'flipInX', 'flipInY', 'fadeIn', 'fadeInUp', 'fadeInRight', 'fadeInUpBig',

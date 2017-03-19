@@ -1,7 +1,4 @@
 
-  .container > p, .ui-content > p, #ajax > p {
-      text-align: center;
-  }
   /*
    * Add a loading animation to lazyloaded images.
    */
@@ -26,6 +23,7 @@
   .js--lazyload::after {
     animation: loading 2s linear -1s infinite;
   }
+
   @keyframes loading {
     0% {
       background-color: rgba(175, 175, 175, 0.95);
@@ -48,6 +46,6 @@
 
 
   /* to prevent flickering */
-.lazy-hidden {
+  .lazy-hidden {
     opacity: 0;
-}
+  }

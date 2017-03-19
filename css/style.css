@@ -1,22 +1,25 @@
 
-  .animation_box{width: 100%; height: 100%;}
+  .animation_box{
+    width: 100%;
+    height: 100%;
+  }
 
   .page-header{
-    position: relative;
+    position: absolute;
+    top:0;
     z-index: -1;
-    background-color: #ddd;
+    /*background-color: #ddd;*/
+    /*height: 100%;
+    width: 100%;*/
   }
 
 /******************************************************************************/
 
-  /* header */
   header{
     background: url(data:../img/album_1901x950.jpg);
     background-size: cover;
     background-position: center top;
     width: 100%;
-    /*height: 950px;*/
-    /*height: 638px;*/
     height: 100%;
     text-align: center;
   }
@@ -33,6 +36,7 @@
   #purchase{
     text-align: center;
     padding-top: 250px;
+    padding-bottom: 38px;
   }
   #purchase li:hover,#purchase li:hover a{color: #FFF;}
   #purchase p{
@@ -56,12 +60,10 @@
     outline: 1px solid #fcbe46;
   }
 
-
-  /*sliding-background-color*/
   #purchase li .btn{
+    width: 76px;
     background: #fcbe46;
     font-size: 10px;
-    width: 76px;
     padding: 13px 30px;
     display: inline-block;
     text-align: center;
@@ -75,10 +77,8 @@
     color: #FFF;
   }
 
-
-  /* purchase_album btn */
   #purchase_album{
-    height: 38px;
+    /*height: 38px;*/
     margin-left: 22%;
     margin-bottom: 30px;
   }
@@ -105,8 +105,6 @@
   .studio_box{
     /*height: 357px;*/
     margin-top: 160px;
-    /*padding-left: 15px;
-    padding-right: 15px;*/
   }
   .studio{
     width: 47.675%;
@@ -228,12 +226,14 @@
   #instagram_box{
     width: 58%; height: 172px;
     float: left;
+    display: none;
   }
   #instagram_box p{
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 0.65rem;
     display: inline;
+    display: none;
   }
 
   #twitter_box{
@@ -241,6 +241,9 @@
     margin-left: 58%;
     padding: 0 15px;
     text-align: center;
+
+    width: 525px;
+    margin: 0 auto;
   }
   #twitter_box a{color: #fcbe46;}
 

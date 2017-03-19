@@ -55,17 +55,7 @@
 
 /* Comfortaa ******************************************************************/
 
-  /* @font-face kit by Fonts2u (http://www.fonts2u.com) */
-  @font-face {
-    font-family:"Comfortaa";
-    src:url("Comfortaa_Regular.eot?") format("eot"),
-    url("Comfortaa_Regular.woff") format("woff"),
-    url("Comfortaa_Regular.ttf") format("truetype"),
-    url("Comfortaa_Regular.svg#Comfortaa") format("svg");
-    font-weight: normal;
-    font-style: normal;
-  }
-
+  @import url('https://fonts.googleapis.com/css?family=Comfortaa');
   .show_wrap{
     font-family: "Comfortaa";
     font-size: 10px;
@@ -87,8 +77,8 @@
     src: local('Abel'), local('Abel-Regular'), url(http://themes.googleusercontent.com/static/fonts/abel/v3/N59kklKPso9WzbZH9jwJSg.ttf) format('truetype');
   }
   .gnb_wrap{
-    font-family: 'Abel';
-    font-size: 16px;
+    font-family: 'Comfortaa';
+    font-size: 13px;
     font-weight: 400;
     text-transform: capitalize;
     line-height: 95px;

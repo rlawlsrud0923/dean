@@ -25,6 +25,17 @@
 <script src="js/jquery.lazyloadxt.js"></script>
 <script src="js/loading.js"></script>
 
+<script>
+  $('a[href^='#']').click(function(event){
+    event.preventDefault();
+    var target = $(this.hash);
+    var header_height = $('gnb_wrap').height();
+    var offset_top = target.offset().top - header_height;
+    $('html, body').animate({scrollTop:target.offset().top},500);
+  });
+  responsiveLazyload.lazyLoadImages();
+</script>
+
 </head>
 <body>
 
@@ -145,9 +156,9 @@
 
             <ul>
               <li>
-                <a class="play_btn btn_hover" href="https://soundcloud.com/iviendoien/dean-im-not-sorry-feat-eric-bellinger" title="I'm Not Sorry ft. Eric Bellinger" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000121967590-rcm122-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58a825b3d36b5" data-autoenqueue="no">play</a>
+                <a class="play_btn btn_hover" href="" rel="" target="">play</a>
               </li>
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/iviendoien/dean-im-not-sorry-feat-eric-bellinger" title="I'm Not Sorry ft. Eric Bellinger" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000121967590-rcm122-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58a825b3d36b5" data-enqueue="yes">enqueue</a></li>
+              <li><a class="play_btn btn_hover" href="" rel="" target="">enqueue</a></li>
             </ul>
           </div>
 
@@ -160,9 +171,9 @@
             <p>Available on iTunes</p>
 
             <ul class="download">
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/dean-ft-anderson-paak-put-my-hands-on-you" title="Put My Hands On You ft. Anderson .Paak (prod. by esta. &amp; Mr. Carmack)" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000129320337-67zprz-t500x500-400x400.jpg" target="https://itunes.apple.com/us/album/put-my-hands-on-you-feat./id1039174552" data-meta="#fap-meta-58aa4e09611e1"data-autoenqueue="no">play</a></li>
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/dean-ft-anderson-paak-put-my-hands-on-you" title="Put My Hands On You ft. Anderson .Paak (prod. by esta. &amp; Mr. Carmack)" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000129320337-67zprz-t500x500-400x400.jpg" target="https://itunes.apple.com/us/album/put-my-hands-on-you-feat./id1039174552" data-meta="#fap-meta-58aa4e09611e1" data-enqueue="yes">enqueue</a></li>
-              <li><a class="download_btn download_hover" href="https://itunes.apple.com/us/album/put-my-hands-on-you-feat./id1039174552" target="_blank">download</a></li>
+              <li><a class="play_btn btn_hover" href="">play</a></li>
+              <li><a class="play_btn btn_hover" href=""rel="" target="">enqueue</a></li>
+              <li><a class="download_btn download_hover" href="" target="_blank">download</a></li>
             </ul>
           </div>
 
@@ -175,8 +186,8 @@
             <p>Available on iTunes</p>
 
             <ul>
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/foreign-dean-remix" title="Foreign ~ k o r e a n ~" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000128757272-eezfyx-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58aa4e096218a" data-autoenqueue="no">play</a></li>
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/foreign-dean-remix" title="Foreign ~ k o r e a n ~" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000128757272-eezfyx-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58aa4e096218a" data-enqueue="yes">enqueue</a></li>
+              <li><a class="play_btn btn_hover" href="" title="Foreign ~ k o r e a n ~" rel="" target="">play</a></li>
+              <li><a class="play_btn btn_hover" href="" title="Foreign ~ k o r e a n ~" rel="" target="">enqueue</a></li>
             </ul>
           </div>
 
@@ -188,8 +199,8 @@
             <p>Available on iTunes</p>
 
             <ul>
-              <li><a class="play_btn btn_hover"  href="https://soundcloud.com/deantheofficial/here-now-dean-ft-mila-j" title="Here &amp; Now (feat. Mila J)" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000118819302-3lrvty-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58aa4e0963120" data-autoenqueue="no">play</a></li>
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/here-now-dean-ft-mila-j" title="Here &amp; Now (feat. Mila J)" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000118819302-3lrvty-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58aa4e0963120" data-enqueue="yes">enqueue</a></li>
+              <li><a class="play_btn btn_hover"  href="" title="Here &amp; Now (feat. Mila J)" rel="" target="">play</a></li>
+              <li><a class="play_btn btn_hover" href="" title="Here &amp; Now (feat. Mila J)" rel="" target="">enqueue</a></li>
             </ul>
           </div>
 
@@ -201,8 +212,8 @@
             <p>Available on iTunes</p>
 
             <ul>
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/here-now-dean-ft-mila-j" title="Here &amp; Now (feat. Mila J)" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000118819302-3lrvty-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58aa4e0963120" data-autoenqueue="no">play</a></li>
-              <li><a class="play_btn btn_hover" href="https://soundcloud.com/deantheofficial/here-now-dean-ft-mila-j" title="Here &amp; Now (feat. Mila J)" rel="http://officialdean.com/wp-content/uploads/2016/02/artworks-000118819302-3lrvty-t500x500-400x400.jpg" target="" data-meta="#fap-meta-58aa4e0963120" data-enqueue="yes">enqueue</a></li>
+              <li><a class="play_btn btn_hover" href="" title="Here &amp; Now (feat. Mila J)" rel="" target="">play</a></li>
+              <li><a class="play_btn btn_hover" href="" title="Here &amp; Now (feat. Mila J)" rel="" target="">enqueue</a></li>
             </ul>
           </div>
 
