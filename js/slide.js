@@ -4,6 +4,7 @@ jQuery(document).ready(function ($) {
 	var index = 0;
 	var container = $("#twitter_txt");
 	var childrenCount = $(".section").length;
+
 	function slideToNext() {
 
 	    index = (index + 1) % childrenCount;
@@ -12,6 +13,7 @@ jQuery(document).ready(function ($) {
 	        marginLeft: -1 * index * 100 + "%"
 	    })
 	}
+	
 	var pt = window.setInterval(function() {
 	    slideToNext();
 	}, time)
