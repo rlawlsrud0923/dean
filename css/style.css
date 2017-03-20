@@ -170,8 +170,7 @@
   }
 
   .news{
-    /*width: 840px;*/
-    width: 68%;
+    width: 840px;
     margin: 0 auto;
     overflow: hidden;
   }

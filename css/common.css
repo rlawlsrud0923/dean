@@ -100,7 +100,8 @@
  #player_wrap *{color: #000;}
 
  #player{
-   width: 960px;
+   max-width: 80.625em;
+   /*width: 960px;*/
    height: 100%;
    margin: 0 auto;
    padding-top: 5px;
@@ -130,7 +131,6 @@
    float: left;
  }
  #fap-cover-wrapper{
-   /*height: 100%;*/
    float: left;
  }
  #fap-cover-replacement{
@@ -176,6 +176,8 @@
    left: 60px;
  }
 
+
+
  #volume_box{
    width: 72px; height: 9px;
    position: relative;
@@ -191,7 +193,9 @@
      border: 1px solid #bc861e;
      position: absolute;
  }
-
+ input[type=range]:focus {
+  outline: none;
+}
  input[type="range"]::-webkit-slider-thumb {
      -webkit-appearance: none;
      background-color: #bc861e;
@@ -216,6 +220,7 @@
    position: relative;
  }
 
+
  #fap-time-bar{
    height: 6px;
    font-size: 10px;
@@ -226,7 +231,6 @@
  }
  .fap-loading-bar{
    background: rgb(188, 134, 30);
-   /*width: 0px;*/
    height: 6px;
    position: absolute;
    top: 0;
@@ -243,6 +247,7 @@
  #fap-total-time{
    float: right;
  }
+
 
 
 
