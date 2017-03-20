@@ -133,9 +133,7 @@
   #mv{
     text-align: center;
   }
-  #mv span{
-    font-weight: 900;
-  }
+  #mv li iframe{width: 100%;}
 
   .studio_box{
     /*height: 357px;*/
@@ -148,6 +146,7 @@
     margin-bottom: 70px;
     padding: 0 0.9375em;
   }
+
   .studio p:first-child{margin-bottom: 20px;}
 
   #mv em{
@@ -200,10 +199,10 @@
   }
   .news_box img{width: 100%;}
   .news_box .download{
-    width: calc(100% - 166px);
+    width: calc(100% - 165px);
   }
   .news_box ul{
-    width: calc(100% - 260px);
+    width: calc(100% - 258px);
     height: 25px;
     margin: 10px auto 0;
   }
