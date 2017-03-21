@@ -1,3 +1,5 @@
+
+  /*loader animation*/
   .loader {
     width: 50px;
     height: 50px;
@@ -15,8 +17,6 @@
   }
   .loader:before,
   .loader:after {
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -36,7 +36,6 @@
 
   .animation_box{
     width: 100%;
-    height: 100%;
   }
 
   .page-header{
@@ -44,20 +43,20 @@
     top:0;
     z-index: -1;
     background-color: #ddd;
-    height: 100%;
     width: 100%;
   }
-
-/******************************************************************************/
-
-  header{
+  #main{
+    width: 100%;
+    height: 100%;
+  }
+  /*header{
     background: url(data:../img/album_1901x950.jpg);
     background-size: cover;
     background-position: center top;
     width: 100%;
     height: 100%;
     text-align: center;
-  }
+  }*/
 
 /******************************************************************************/
 
