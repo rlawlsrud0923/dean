@@ -1,6 +1,6 @@
   *{
      margin: 0; padding: 0;
-     outline: 1px #F00 solid;
+     outline: 1px #FFF dotted;
    }
 
  html,body{height: 100%; color: #FFF;}
@@ -33,7 +33,7 @@
      float: left;
    }
    #gnb{
-     max-width: 67.8%;
+     max-width: 99.3em;
      /*width: 1280px;*/
      margin: 0 auto;
    }

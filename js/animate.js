@@ -10,6 +10,7 @@ $( document ).ready( function() {
 
   $(window).load(function() {
     $('.js--lazyload').hide(),
+    $('body').removeClass('animation_box'),
 
     $.lazyLoadXT.onload = function() {
         var $el = $("#main"); //이미지 태그 아이디로 이미지 태그 가져와서

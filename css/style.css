@@ -113,17 +113,15 @@
   }
 
   #purchase_album{
-    /*height: 38px;*/
+    height: 38px;
     margin-left: 22%;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
   }
 
 /******************************************************************************/
 
   /* soundcloud */
   #soundcloud{
-    width: 810px;
-    height: 353px;
     margin: 0 auto 300px;
   }
 
@@ -133,7 +131,14 @@
   #mv{
     text-align: center;
   }
-  #mv li iframe{width: 100%;}
+  #mv li iframe{
+    width: 100%;
+  }
+  #mv em{
+    float: left;
+    width: 100%;
+    margin-bottom: 150px;
+  }
 
   .studio_box{
     /*height: 357px;*/
@@ -144,7 +149,8 @@
     /*width: 615px;*/
     float: left;
     margin-bottom: 70px;
-    padding: 0 0.9375em;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
   }
 
   .studio p:first-child{margin-bottom: 20px;}
@@ -153,12 +159,13 @@
 
   /* news */
   #news{
-    margin-top: 150px;
-    margin-bottom: 120px;
+    /*margin-top: 150px;*/
     text-align: center;
   }
   #news h1{
     margin-bottom: 90px;
+    float: left;
+    width: 100%;
   }
 
   .news{
@@ -239,7 +246,10 @@
 /******************************************************************************/
 
   /* sns */
-  #sns{padding-bottom: 100px;}
+  #sns{
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
   #sns i{font-size: 30px;}
 
   .icon_box{
@@ -377,8 +387,8 @@
 
   /* news_ */
   .news_{
-    /*width: 840px;*/
-    width: 68%;
+    width: 840px;
+    /*width: 68%;*/
     margin: 0 auto;
     overflow: hidden;
   }
