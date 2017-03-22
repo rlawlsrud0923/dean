@@ -169,13 +169,13 @@ const initialize = ({
  * @param  {Object} config configuration options (see `initialize()`)
  * @return {Boolean}       `true` if initialized; `false` if not
  */
-export function lazyLoadImages(config = {}) {
-  // If we have `srcset` support, initialize the lazyloader.
-  if ('srcset' in document.createElement('img')) {
-    initialize(config);
-  }
-}
-
-export default {
-  lazyLoadImages,
-};
+// export function lazyLoadImages(config = {}) {
+//   // If we have `srcset` support, initialize the lazyloader.
+//   if ('srcset' in document.createElement('img')) {
+//     initialize(config);
+//   }
+// }
+//
+// export default {
+//   lazyLoadImages,
+// };
