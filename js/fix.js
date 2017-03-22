@@ -17,4 +17,16 @@ $( document ).ready( function() { //준비되면 실행해
 
   });
 
+
+  //gnb 클릭 - 해당 id로 이동
+  $('#gnb li a[href^="#"]').click(function(e){
+      e.preventDefault();
+      var $tg = $(this).attr('href');
+      var spotTop = $($tg).offset().top;
+      $('body,html').animate({
+          'scrollTop': spotTop-72
+      },1000)
+  });
+
+
 });
