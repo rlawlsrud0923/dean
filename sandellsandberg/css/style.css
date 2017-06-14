@@ -1,7 +1,7 @@
 *{
   margin: 0; padding: 0;
   list-style: none;
-  outline: 1px #FF3369 solid;
+  outline: 1px #00f solid;
 }
 body{
   color: #565656;
@@ -89,6 +89,7 @@ a,button,.vc_tta-icon,div.more>span,i{cursor: pointer;}
     display: block;
     float: left;
     height: 63px;
+    line-height: 63px;
   }
   /*gnb_list*/
   .gnb ul{
