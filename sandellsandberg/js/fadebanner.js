@@ -18,14 +18,17 @@ $(document).ready(function(){
     }
   });
 
+
+
+
   function fademotion(){
     $('.fadebanner ul li img').eq(fadeIdx).removeClass('on').fadeOut()
-    fadeIdx ++
+      fadeIdx ++
     
     $('.fadebanner ul li img').eq(fadeIdx).addClass('on').fadeIn()
 
     if(fadeIdx == $('.fadebanner ul li').length){
-      fadeIdx=0
+      fadeIdx = 0
       $('.fadebanner ul li img').eq(fadeIdx).addClass('on').fadeIn().parent().siblings().removeClass('on')
     }
   };
