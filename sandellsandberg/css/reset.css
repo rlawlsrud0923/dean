@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+*{
+  margin: 0; padding: 0;
+  list-style: none;
+  outline: 1px #00f solid;
+}
+
+body{
+  color: #565656;
+}
+
+a{text-decoration: none;}
