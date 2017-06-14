@@ -66,49 +66,72 @@ a,button,.vc_tta-icon,div.more>span,i{cursor: pointer;}
     padding: 20px;
   }
   .gnb_panel{
-    height: 76px;
+    height: 86px;
     margin-left: 68px;
-    padding-top: 10px;
+    
     padding-left: 10px;
     padding-right: 10px;
   }
-  .fix{
-    height: 58px;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(252,237,35,0.9);
-    -webkit-transition: -webkit-transform .3s ease, background .3s ease;
-    transition: -webkit-transform .3s ease, transform .3s ease, background .3s ease;
-  }
-  .fix .gnb_panel > a img{width: 220px;}
   .gnb_panel > a{
     display: block;
     float: left;
-    height: 63px;
-    line-height: 63px;
+    height: 58px;
+    line-height: 72.5px;
+    margin-top: 11.5px; /*logo 정렬*/
   }
+  
   /*gnb_list*/
   .gnb ul{
     float: right;
-    width: 600px;
-    padding: 0 18px;
+    /*width: 600px;*/
+    /*padding: 0 18px;*/
     font-size: 18px;
     font-weight: bold;
     display: inline-block;
   }
   .gnb li{
     float: left;
-    line-height: 63px;
+    line-height: 86px;
     font-size: 18px;
   }
   .gnb li a{
     padding: 0 20px;
     display: block;
   }
+
+  
+  
+  /*fix*/
+  .fix{
+    height: 58px;
+    padding: 0 20px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: rgba(252,237,35,0.9);
+    -webkit-transition: -webkit-transform .3s ease, background .3s ease;
+    transition: -webkit-transform .3s ease, transform .3s ease, background .3s ease;
+  }
+  .fix .gnb_panel {
+    padding-top: 0;
+    height: 58px;
+  }
+  .fix .gnb_panel a{
+    margin-top: 0;
+  }
+  
+  .fix .gnb_panel > a img{width: 220px;}
+  .fix ul li{
+    height: 58px;
+    line-height: 58px;
+  }
+  
+  
+  
 
 
 

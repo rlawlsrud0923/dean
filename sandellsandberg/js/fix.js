@@ -1,8 +1,12 @@
 //gnb 위치 고정
 $( document ).ready( function() { //준비되면 실행해
 
+
   var gnbOffset = $(' .fadebanner ').offset(); //gnb 위치값 알아내
   // console.log($( '.gnb' ).offset());
+  
+
+  
 
   $( window ).scroll( function() { //스크롤 발생하면 함수를 실행시켜
 
@@ -12,8 +16,6 @@ $( document ).ready( function() { //준비되면 실행해
 
       $( '.gnb' ).addClass( 'fix' ); //lnb_area에 클래스 fix를 만들어 줘서 고정시켜주기
 
-      $( '.gnb_panel').css("padding-top","0").height(58);
-
     }
 
 
@@ -21,10 +23,15 @@ $( document ).ready( function() { //준비되면 실행해
 
       $(" .gnb img ").attr("src","img/sa_b_170x63.png"); //logo 이미지 다시 바꿔주기
 
-      $(' .gnb ').removeClass(' fix '); // .fix를 제거해
+      $(' .gnb ').removeClass('fix'); // .fix를 제거해
+      
     }
 
   });
+
+
+
+
 
   //gnb 클릭 - 해당 섹션으로 이동
   // $('section').children('a[href^=#]').click(function () {
