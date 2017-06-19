@@ -15,24 +15,30 @@ $(function(){
      if(idx == $('.view li').length){ //view li순서가
          idx = 0 //0번째면
          movement('100%',0,idx) //left값을 100% , animate left 0 에서 멈춤 , idx순서인 li의 img를
-     }else if(idx < 0){
+     }else if(idx > 0){
          idx = $('.view li').length -1;
          movement('-100%',0,idx)
      }
-  }
+  };
+
+
+
+
 
   $('.prev').click(function(){
-      console.log(idx)
+      
       movement(0,'-100%',idx);
       idx++
       movement('100%',0,idx);
-  })
+  });
+  
+  
   $('.next').click(function(){
-      console.log("click");
+
       movement(0,'100%',idx);
       idx--
       movement('-100%',0,idx);
-  })
+  });
 
 
 
