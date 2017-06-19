@@ -38,6 +38,8 @@ $(document).ready(function(){
       $('.fadebanner ul li img').eq(fadeIdx).addClass('on').fadeIn().parent().siblings().removeClass('on')
     }
   };
+  
+  
 
 
 
