@@ -120,7 +120,9 @@ a,button,.vc_tta-icon,div.more>span,i{cursor: pointer;}
     margin-top: 0;
   }
   
-  .fix .gnb_panel > a img{width: 220px;}
+  .fix .gnb_panel > a img{
+    width: 220px;
+  }
   
   .fix ul li{
     height: 58px;
@@ -157,7 +159,9 @@ a,button,.vc_tta-icon,div.more>span,i{cursor: pointer;}
     left: 0;
     top: 0;
   }
-  .fadebanner li:first-child img{display: block;}
+  .fadebanner li:first-child img{
+    display: block;
+  }
   .fadebanner li a{
     font-size: 0;
     width: 12px;
